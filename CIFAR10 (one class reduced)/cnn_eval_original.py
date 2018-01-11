@@ -70,13 +70,3 @@ print('Test accuracy:', score[1])
 Y_test = np.argmax(y_test, axis=1) # Convert one-hot to index
 y_pred = model.predict_classes(x_test)
 print(classification_report(Y_test, y_pred))
-
-
-
-
-'''
-Results:
-
-
-'''
-
