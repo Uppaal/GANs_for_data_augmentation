@@ -1,6 +1,5 @@
 # Reference: https://github.com/jacobgil/keras-dcgan/blob/master/dcgan.py
-
-# Need to run this to generate one class's data at a time
+# Run this to generate one class's data at a time
 
 import os
 os.environ["KERAS_BACKEND"] = "tensorflow"
