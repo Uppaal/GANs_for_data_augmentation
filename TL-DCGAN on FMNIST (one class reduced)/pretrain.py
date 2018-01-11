@@ -1,5 +1,3 @@
-# Reference: https://machinelearningmastery.com/check-point-deep-learning-models-keras/, https://keras.io/getting-started/faq/#how-can-i-freeze-keras-layers
-
 import os
 os.environ["KERAS_BACKEND"] = "tensorflow"
 import numpy as np
@@ -23,7 +21,6 @@ K.set_image_dim_ordering('th')
 
 ''' Preprocessing '''
 
-# The results are a little better when the dimensionality of the random vector is only 10. The dimensionality has been left at 100 for consistency with other GAN implementations.
 randomDim = 100
 
 # Load FMNIST data
@@ -69,11 +66,3 @@ discriminator.compile(loss='binary_crossentropy', optimizer=adam)
 # Fit the model
 discriminator.fit(X_train, y_train, validation_split=0.33, epochs=20, batch_size=128, verbose=1)
 discriminator.save_weights('pretrain_discriminator_weights.h5')
-
-
-'''
-discriminator.load_weights('pretrain_discriminator_weights.h5', by_name=True)
-ValueError: Dimension 0 in both shapes must be equal, but are 5 and 64 for 'Assign' (op: 'Assign') with input shapes: [5,5,3,64], [64,1,5,5].
-
-'''
-
