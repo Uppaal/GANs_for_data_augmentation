@@ -69,29 +69,3 @@ print('Test accuracy:', score[1])
 Y_test = np.argmax(y_test, axis=1) # Convert one-hot to index
 y_pred = model.predict_classes(x_test)
 print(classification_report(Y_test, y_pred))
-
-
-
-
-
-''' 
-Results:
-
-Time:  -390.4058084487915
-Test loss: 0.287974014056
-Test accuracy: 0.8958
-             precision    recall  f1-score   support
-
-          0       0.81      0.88      0.84      1000
-          1       0.98      0.98      0.98      1000
-          2       0.81      0.85      0.83      1000
-          3       0.91      0.88      0.90      1000
-          4       0.81      0.87      0.84      1000
-          5       0.98      0.97      0.97      1000
-          6       0.76      0.62      0.69      1000
-          7       0.95      0.96      0.95      1000
-          8       0.97      0.98      0.98      1000
-          9       0.96      0.97      0.96      1000
-
-avg / total       0.90      0.90      0.89     10000
-'''
