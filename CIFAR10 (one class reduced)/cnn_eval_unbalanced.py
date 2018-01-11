@@ -90,35 +90,3 @@ print('Test accuracy:', score[1])
 Y_test = np.argmax(y_test, axis=1) # Convert one-hot to index
 y_pred = model.predict_classes(x_test)
 print(classification_report(Y_test, y_pred))
-
-
-
-
-'''
-Results: (60% removed)
-
-Original CIFAR-10:  (50000, 32, 32, 3) (50000, 1)
-Original number of images with  5 :  5000
-New number of images with  5 :  2000
-New CIFAR-10:  (47000, 32, 32, 3) (47000, 1)
-Train on 47000 samples, validate on 10000 samples
-
-Time:  -425.95149874687195
-Test loss: 1.13779500198
-Test accuracy: 0.5998
-             precision    recall  f1-score   support
-
-          0       0.64      0.68      0.66      1000
-          1       0.74      0.76      0.75      1000
-          2       0.34      0.68      0.46      1000
-          3       0.46      0.44      0.45      1000
-          4       0.55      0.52      0.54      1000
-          5       0.66      0.25      0.36      1000
-          6       0.83      0.58      0.68      1000
-          7       0.63      0.75      0.69      1000
-          8       0.80      0.66      0.73      1000
-          9       0.72      0.67      0.70      1000
-
-avg / total       0.64      0.60      0.60     10000
-'''
-
