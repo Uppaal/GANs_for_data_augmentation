@@ -1,4 +1,4 @@
-# GANs_for_data_augmentation
+# GANs for data augmentation
 
 Data is a highly important factor in Deep Learning. The presence of a large, labeled and balanced dataset is
 often essential for a model to perform optimally at a particular task. However, finding such data in the real
